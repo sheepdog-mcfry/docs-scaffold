@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="docs-html">
+<head>
+  <title>Front Matter - Documentation Scaffold</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/docs-scaffold/style/style.css" >
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link id="searchIndex" href="/docs-scaffold/index.json" rel="preload">
+</head>
+<body class="docs-body">
+  <div class="docs-sidebar">
+    <nav class="docs-nav">
+      <a class="docs-nav__logo" href="/docs-scaffold/"></a>
+        <ul class="docs-nav__ul">
+                <li class="docs-nav__li docs-nav__li--group">
+                          <a href="/docs-scaffold/gettingstarted.html" class="docs-nav__item">Getting started</a>
+                    <ul class="docs-nav__ul">
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/gettingstarted/configuring.html" class="docs-nav__item">Configuring</a>
+                            </li>
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/gettingstarted/writing.html" class="docs-nav__item">Writing</a>
+                            </li>
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/gettingstarted/building.html" class="docs-nav__item">Building</a>
+                            </li>
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/gettingstarted/deploying.html" class="docs-nav__item">Deploying</a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="docs-nav__li docs-nav__li--group">
+                          <a href="/docs-scaffold/features.html" class="docs-nav__item">Features</a>
+                    <ul class="docs-nav__ul">
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/features/layout.html" class="docs-nav__item">Layout</a>
+                            </li>
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/features/navigation.html" class="docs-nav__item">Navigation</a>
+                            </li>
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/features/search.html" class="docs-nav__item">Search</a>
+                            </li>
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/features/syntaxHighlight.html" class="docs-nav__item">Syntax Highlighting</a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="docs-nav__li docs-nav__li--category">
+                          <span class="docs-nav__item">Content Management</span>
+                    <ul class="docs-nav__ul">
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/content/filestructure.html" class="docs-nav__item">File Structure</a>
+                            </li>
+                            <li class="docs-nav__li">
+                                      <a href="/docs-scaffold/content/frontmatter.html" class="docs-nav__item">Front Matter</a>
+                            </li>
+                            <li class="docs-nav__li docs-nav__li--category">
+                                      <span class="docs-nav__item">Supported File Types</span>
+                                <ul class="docs-nav__ul">
+                                        <li class="docs-nav__li">
+                                                  <a href="/docs-scaffold/content/filetypes/markdown.html" class="docs-nav__item">Markdown</a>
+                                        </li>
+                                        <li class="docs-nav__li">
+                                                  <a href="/docs-scaffold/content/filetypes/openapi.html" class="docs-nav__item">Open API Spec</a>
+                                        </li>
+                                </ul>
+                            </li>
+                    </ul>
+                </li>
+        </ul>
+          <hr class="docs-nav__hr" />
+          <ul class="docs-nav__ul">
+                  <li class="docs-nav__li">
+                            <a href="/docs-scaffold/about.html" class="docs-nav__item">About</a>
+                  </li>
+          </ul>
+          <hr class="docs-nav__hr" />
+          <ul class="docs-nav__ul">
+                  <li class="docs-nav__li docs-nav__li--category">
+                            <span class="docs-nav__item">API Reference</span>
+                      <ul class="docs-nav__ul">
+                              <li class="docs-nav__li">
+                                        <a href="/docs-scaffold/apireference/petstore.html" class="docs-nav__item">Pet Store</a>
+                              </li>
+                              <li class="docs-nav__li">
+                                        <a href="/docs-scaffold/apireference/swaggerCodegen.html" class="docs-nav__item">Swagger Codegen</a>
+                              </li>
+                      </ul>
+                  </li>
+          </ul>
+    </nav>
+  </div>
+  <div id="barba-wrapper" class="docs-wrapper">
+    <div class="docs-topbar">
+      <div class="docs-topbar__search-icon">
+        <i class="material-icons md-64">search</i>
+      </div>
+      <div class="docs-topbar__search">
+        <input id="docs-search-box" type="text" class="docs-topbar__searchinput" placeholder="Search" tabindex="1" autocapitalize="none" autocomplete="off" autocorrect="off" type="text" autofocus />
+      </div>
+      <a href="#" id="docs-search__close" class="docs-search__close"><i class="material-icons md-64">close</i></a>
+      <div class="docs-topbar__links">
+        <a class="docs-topbar__link" href="#">Support</a>
+        <a class="docs-topbar__link" href="#">Dashboard</a>
+      </div>
+    </div>
+    <div class="docs-content barba-container">
+      <h1>Front Matter</h1>
+      <ol class="tn-breadcrumbs">
+              <li class="tn-breadcrumb">
+                  <a href="/docs-scaffold/">Home</a>
+              </li>
+          <li class="tn-breadcrumb tn-breadcrumb--active">
+              Front Matter
+          </li>
+      </ol>
+      <p>Front matter allows you to attach metadata to files by prepending a yaml document to it. Metalsmith parses this yaml document and passes it along to the plugins that transform the content into beautiful documentation.</p>
+<p>If you see mentions of metadata other places in this documentation, it is ususlly synonymous with front matter ie. yaml that precede the actual content in a file.</p>
+<h2 id="common-tags">Common tags</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>required</th>
+<th>default</th>
+<th>details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>yes</td>
+<td><code>null</code></td>
+<td>Every page must have a title that appears on top of the page and in the navigation (if the page is listed there)</td>
+</tr>
+<tr>
+<td>index</td>
+<td>bool</td>
+<td>no</td>
+<td><code>false</code></td>
+<td>The home/index page must be tagged with <code>index: true</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="plugin-tags">Plugin tags</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>required</th>
+<th>default</th>
+<th>details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layout</td>
+<td>string</td>
+<td>no</td>
+<td><code>null</code></td>
+<td>If present, the page layout will use the specified layout instead of the default. For more info see <a href="../features/layout.html">the layout documentation</a></td>
+</tr>
+<tr>
+<td>nav_groups</td>
+<td>string[]</td>
+<td>no</td>
+<td><code>null</code></td>
+<td>A list of navigations the page should appear in. For more info see <a href="../features/navigation.html">the navigation documentation</a></td>
+</tr>
+<tr>
+<td>nav_sort</td>
+<td>int</td>
+<td>no</td>
+<td><code>null</code></td>
+<td>Specifies the order the element should be ordered in the navigation. Overrides the default alphabetical order</td>
+</tr>
+<tr>
+<td>nav_group</td>
+<td>bool</td>
+<td>no</td>
+<td><code>false</code></td>
+<td>Specifies that the file should appear as an emphasized group in the navigation</td>
+</tr>
+<tr>
+<td>nav_category</td>
+<td>bool</td>
+<td>no</td>
+<td><code>false</code></td>
+<td>Specifies that the file should appear only as an category in the navigation (cannot be clicked itself)</td>
+</tr>
+<tr>
+<td>openApiUrl</td>
+<td>string</td>
+<td>no</td>
+<td><code>null</code></td>
+<td>An url pointing to a Open API spec</td>
+</tr>
+<tr>
+<td>lunr</td>
+<td>bool</td>
+<td>no</td>
+<td><code>false</code></td>
+<td>Toogles if the page should show up in search results. For more info see the <a href="../features/search.html">search documentation</a></td>
+</tr>
+<tr>
+<td>tags</td>
+<td>string or string[]</td>
+<td>no</td>
+<td><code>null</code></td>
+<td>Tags that the page should show up as a search result for. Tags have twice the weight of the title, and 10 times the weight of page content in the ordering of results. If an array of strings is used, matching will be less forgiving</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<p>In the following example the metadata tag <code>title</code> is set to <code>Example page</code>, and the page content is <code>This is the example page</code>.</p>
+<pre><code class="hljs"><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> Example page
+<span class="hljs-meta">---</span>
+This is the example page</code></pre>
+        <a class="docs-edit-btn" href="https://github.com/TelenorFrontend/docs-scaffold/edit/master/docs/content/frontmatter.md" target="_blank">Edit this page</a>
+    </div>
+    <div id="docs-search" class="docs-search">
+      <ul id="docs-search__results" class="docs-search__results"></ul>
+    </div>
+  </div>
+  <script src="/docs-scaffold/script/vendor.js" ></script>
+  <script src="/docs-scaffold/script/script.js" ></script>
+</body>
+</html>
