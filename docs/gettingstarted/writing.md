@@ -7,6 +7,8 @@ nav_groups:
   - primary
 tags:
   - writing
+collection: gettingstarted
+date: 2013-02-22
 ---
 All documentation should be placed in the `docs` folder along with assets like images.
 
