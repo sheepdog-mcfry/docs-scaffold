@@ -9,7 +9,7 @@ tags:
   - deploy
   - travis
 collection: gettingstarted
-date: 2013-02-24
+order: 5
 ---
 After building, the `build` folder contains standalone, static html files that can be published to any web server.
 

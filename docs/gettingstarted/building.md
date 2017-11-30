@@ -9,7 +9,7 @@ tags:
   - build
   - npm
 collection: gettingstarted
-date: 2013-02-23
+order: 4
 ---
 The npm build script will package assets and build the documentation.
 
