@@ -97,5 +97,14 @@
   {{/if}}
   <script src="{{ webRoot }}script/vendor.js" ></script>
   <script src="{{ webRoot }}script/script.js" ></script>
+  <script type="text/javascript">
+    window.pageReady = (container) => {
+      for (var i = 0; i < document.links.length; i++) {
+        if (document.links[i].href == document.URL) {
+          document.links[i].className += ' active';
+        }
+      }
+    }
+  </script>
 </body>
 </html>

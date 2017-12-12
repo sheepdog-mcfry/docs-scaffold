@@ -6,6 +6,18 @@ function closeSidebar() {
     document.getElementById("docs-sidebar").classList.remove("docs-sidebar--open");
 }
 
+function updateNavClass(newclass) {
+    var navList = document.querySelectorAll("."+newclass);
+    [].forEach.call(navList, function(el) {
+        el.classList.remove(newclass);
+    });
+    for (var i = 0; i < document.links.length; i++) {
+        if (document.links[i].href == document.URL) {
+            document.links[i].classList.add(newclass);
+        }
+  }
+}
+
 function initSidebar() {
     const sidebarWidth = 260;
 
@@ -22,7 +34,6 @@ function initSidebar() {
         if (e.x <= sidebarWidth) {
             return;
         }
-
         closeSidebar();
     });
 
@@ -31,9 +42,8 @@ function initSidebar() {
         if (e.changedTouches[0].pageX <= sidebarWidth) {
             return;
         }
-
         closeSidebar();
     }, false);
 }
 
-export { initSidebar, openSidebar, closeSidebar };
+export { initSidebar, openSidebar, closeSidebar, updateNavClass };
