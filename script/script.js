@@ -13,7 +13,6 @@ function initBarba() {
     Barba.Pjax.start();
     Barba.Prefetch.init();
     Barba.Dispatcher.on("newPageReady", function(currentStatus, oldStatus, container) {
-        setActiveLink();
         delete window.pageReady;
         hideSearchResults();
         hideSearchField();
