@@ -1,5 +1,6 @@
 ---
 title: Building
+description: Detailed information on the documentation scaffold build process.
 lunr: true
 nav_sort: 3
 nav_groups:
@@ -7,6 +8,8 @@ nav_groups:
 tags:
   - build
   - npm
+collection: gettingstarted
+order: 4
 ---
 The npm build script will package assets and build the documentation.
 

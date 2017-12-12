@@ -1,5 +1,6 @@
 ---
 title: Configuring
+description: Detailed information on the documentation scaffold configuration process.
 lunr: true
 nav_sort: 1
 nav_groups:
@@ -7,6 +8,8 @@ nav_groups:
 tags:
   - config
   - configuring
+collection: gettingstarted
+order: 2
 ---
 Configuring your new documentation project is as simple as altering the configuration files in the `config` folder.
 

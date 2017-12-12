@@ -1,12 +1,15 @@
 ---
 title: Features
+description: Details on how to add and remove features from the documentation scaffold.
 lunr: true
-nav_sort: 2
+nav_sort: 3
 nav_groups:
   - primary
-nav_group: true
+nav_subgroup: true
 tags:
   - features
+collection: features
+order: 1
 ---
 The docs-scaffold comes with a limited number of features, but they can easily be expanded upon by modifying the [Metalsmith](http://www.metalsmith.io/) build pipe.
 

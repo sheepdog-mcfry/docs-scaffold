@@ -1,13 +1,16 @@
 ---
-title: Getting started
+title: Getting Started
+description: The getting started page guides you through starting a new documentation project using the documentation scaffold.
 lunr: true
-nav_sort: 1
+nav_sort: 2
 nav_groups:
   - primary
-nav_group: true
+nav_subgroup: true
 tags:
   - starting
   - setup
+collection: gettingstarted
+order: 1
 ---
 To start a new documentation project, start by cloning or forking the [docs-scaffold](https://github.com/TelenorFrontend/docs-scaffold) repository.
 
@@ -27,7 +30,13 @@ $ npm install
 
 Start by modifying the config files in the `config` folder, and the documentation itself in the `docs` folder.
 
-To build the documentation, all you have to do is run the npm script `build`. This will package all the assets and generate static html pages from the documentation in the `docs` folder.
+To start the development server run the following command.
+
+```shell
+$ npm run dev
+```
+
+To build the documentation run the npm script `build`. This will package all the assets and generate static html pages from the documentation in the `docs` folder.
 
 ```shell
 $ npm run build
