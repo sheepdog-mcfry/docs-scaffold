@@ -6,16 +6,12 @@ function closeSidebar() {
     document.getElementById("docs-sidebar").classList.remove("docs-sidebar--open");
 }
 
-function updateNavClass(newclass) {
-    var navList = document.querySelectorAll("."+newclass);
-    [].forEach.call(navList, function(el) {
-        el.classList.remove(newclass);
-    });
-    for (var i = 0; i < document.links.length; i++) {
-        if (document.links[i].href == document.URL) {
-            document.links[i].classList.add(newclass);
-        }
-  }
+function setActiveLink() {
+    document.querySelectorAll("a.docs-nav__item").forEach(el => el.classList.remove("docs-nav-active-url"));
+    const activeLink = document.querySelector(`a[href='${window.location.pathname}']`);
+    if (activeLink !== null) {
+        activeLink.classList.add("docs-nav-active-url")
+    }
 }
 
 function initSidebar() {
@@ -46,4 +42,4 @@ function initSidebar() {
     }, false);
 }
 
-export { initSidebar, openSidebar, closeSidebar, updateNavClass };
+export { initSidebar, openSidebar, closeSidebar, setActiveLink };
