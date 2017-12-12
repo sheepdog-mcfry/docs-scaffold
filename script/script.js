@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     initBarba();
     initSearch();
     initSidebar();
+    setActiveLink();
 });
-
-setActiveLink();
 
 function initBarba() {
     Barba.Pjax.start();
