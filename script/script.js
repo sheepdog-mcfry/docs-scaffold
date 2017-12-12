@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function initBarba() {
     Barba.Pjax.start();
+    setActiveLink();
     Barba.Prefetch.init();
     Barba.Dispatcher.on("newPageReady", function(currentStatus, oldStatus, container) {
         setActiveLink();
